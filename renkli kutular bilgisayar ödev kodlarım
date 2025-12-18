@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <style>
+        /* 4. Adım: div elemanlarının genel özellikleri */
+        div {
+            height: 100px;
+            color: white;
+            font-size: 20px;
+            border-radius: 10px;
+            margin-bottom: 10px; /* Kutular arası boşluk için ekledim */
+        }
+
+        /* 3. Adım: Arka plan renk geçişleri (Linear Gradient) */
+        .gecisli1 {
+            width: 20%;
+            background: linear-gradient(to right, skyblue, #23538A);
+        }
+
+        .gecisli2 {
+            width: 30%;
+            background: linear-gradient(to left, red, black);
+        }
+
+        .gecisli3 {
+            width: 40%;
+            background: linear-gradient(to right top, #0cbaba, #380036, darksalmon);
+        }
+
+        /* 5. Adım: Hover (Fare üzerine gelince) Animasyonu */
+        div:hover {
+            width: 1000px;
+            cursor: hand;
+            transition-property: width;
+            transition-duration: 0.5s;
+            transition-delay: 0.1s;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="gecisli1"> Renkli Kutu 1 </div>
+    <div class="gecisli2"> Renkli Kutu 2 </div>
+    <div class="gecisli3"> Renkli Kutu 3 </div>
+
+</body>
+</html>
