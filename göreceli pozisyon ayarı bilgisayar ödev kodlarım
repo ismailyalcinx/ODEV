@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <style>
+        /* 2. Adım: Tüm kutuların ortak özellikleri */
+        .kutuSablonu {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            background-color: lightskyblue;
+            border: 2px solid black;
+            text-align: center;
+            line-height: 50px;
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+            vertical-align: top; /* Hizalama kaymasını önlemek için */
+        }
+
+        /* 3. Adım: Kutu 3 için görseldeki spesifik kaydırma */
+        .goreceliKutu {
+            position: relative;
+            left: 30px;
+            top: 30px;
+            /* Görseldeki kesikli çizgili hayalet kutu etkisini simüle etmez, 
+               doğrudan kutuyu kaydırır */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="kutuSablonu">Kutu 1</div>
+    <div class="kutuSablonu">Kutu 2</div>
+    <div class="kutuSablonu goreceliKutu">Kutu 3</div>
+    <div class="kutuSablonu">Kutu 4</div>
+
+</body>
+</html>
