@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            background-color: purple;
+        }
+
+        div {
+            background-color: orange;
+            width: 100px;
+            height: 100px;
+            /* Kutuların hem yan yana gelmesi hem de 100px kalması için bu şart */
+            display: inline-block; 
+            /* Görseldeki gibi metni ortalamak istersen şunları da ekleyebilirsin: */
+            text-align: center;
+            line-height: 100px;
+        }
+    </style>
+</head>
+<body>
+
+    <div>KUTU 1</div>
+    <div>KUTU 2</div>
+
+</body>
+</html>
