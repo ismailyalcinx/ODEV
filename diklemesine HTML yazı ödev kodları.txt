@@ -1,0 +1,28 @@
+!DOCTYPE html
+html
+head
+    style
+        body {
+            background-color skyblue;
+        }
+
+        div {
+            background-color orange;
+            width 30px;
+            height 30px;
+            text-align center;
+            border 2px solid gray;
+            line-height 30px;  Harfleri dikeyde ortalamak için 
+            margin 2px;  Kutuların birbirine yapışmaması için 
+        }
+    style
+head
+body
+
+    divbHbdiv
+    divbTbdiv
+    divbMbdiv
+    divbLbdiv
+
+body
+html
