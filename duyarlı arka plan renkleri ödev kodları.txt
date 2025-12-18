@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Responsive Uygulama</title>
+
+    <style>
+        body {
+            background-color: #a8dadc;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            padding-top: 100px;
+        }
+
+        @media screen and (min-width: 600px) {
+            body {
+                background-color: #7f6f51;
+            }
+        }
+
+        @media screen and (min-width: 800px) {
+            body {
+                background-color: #457b9d;
+            }
+        }
+
+        @media screen and (min-width: 1200px) {
+            body {
+                background-color: #e9c46a;
+            }
+        }
+    </style>
+
+</head>
+<body>
+
+    <h1>Responsive Web Tasarım</h1>
+    <p>Ekran genişliğine göre arka plan rengi değişmektedir.</p>
+
+</body>
+</html>
