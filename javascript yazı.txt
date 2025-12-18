@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        /* 1. Adım: Arka plan rengi */
+        body {
+            background-color: orange;
+        }
+
+        /* 5. Adım: Ortak harf özellikleri (Class) */
+        .harf {
+            font-size: 30px;
+        }
+
+        /* 6. Adım: Sadece "J" harfi için özel stil (ID) */
+        #ozelHarf {
+            font-size: 40px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <span class="harf" id="ozelHarf"><b>J</b></span>
+    <span class="harf"><b>S</b></span>
+    <span class="harf"><b>C</b></span>
+    <span class="harf"><b>R</b></span>
+    <span class="harf"><b>I</b></span>
+    <span class="harf"><b>P</b></span>
+    <span class="harf"><b>T</b></span>
+
+</body>
+</html>
