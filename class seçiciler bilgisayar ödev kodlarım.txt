@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <style>
+        /* 3. Adım: Arka plan rengini lightcyan yapma */
+        body {
+            background-color: lightcyan;
+            text-align: center;
+            padding-top: 50px;
+        }
+
+        /* 4. Adım: .galeri sınıfı için stil özellikleri */
+        .galeri {
+            width: 160px;
+            height: 90px;
+            /* Kenarlık özellikleri */
+            border-width: 2px;
+            border-style: solid;
+            border-color: darkorange;
+            border-radius: 10px; /* 10 piksel yuvarlanmış */
+            margin: 10px;
+            object-fit: cover; /* Resmin kutuya tam oturması için */
+        }
+    </style>
+</head>
+<body>
+
+    <img src="https://picsum.photos/id/902/160/90" class="galeri" alt="Uzay">
+    
+    <img src="https://picsum.photos/id/1011/160/90" class="galeri" alt="Kumsal">
+    
+    <img src="https://picsum.photos/id/10/160/90" class="galeri" alt="Gün Batımı">
+    
+    <img src="https://picsum.photos/id/964/160/90" class="galeri" alt="Yıldızlar">
+
+</body>
+</html>
