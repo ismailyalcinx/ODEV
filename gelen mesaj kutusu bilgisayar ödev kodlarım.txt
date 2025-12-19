@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <style>
+        /* CSS Kodları */
+        body {
+            background-color: lightyellow;
+            font-family: Arial, sans-serif;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .mesajKutusu {
+            clear: both;
+            margin-top: 10px;
+            background-color: lightsteelblue;
+            width: 250px;
+            height: 60px;
+            border-radius: 15px;
+            padding: 5px;
+            transition: 0.3s;
+        }
+
+        .mesajKutusu:hover {
+            background-color: lavender;
+            cursor: pointer;
+        }
+
+        .mesajKutusu img {
+            width: 50px;
+            height: 50px;
+            border-radius: 35px;
+            float: left;
+            margin: 5px;
+            object-fit: cover; /* Resmin bozulmaması için */
+        }
+
+        .adSoyad {
+            padding-top: 10px;
+            color: black;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .tarih {
+            padding-top: 5px;
+            font-size: 10px;
+            color: dimgray;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="mesajKutusu">
+        <a href="#">
+            <img src="https://picsum.photos/id/64/50/50">
+            <div class="adSoyad">Harun (Mühendis)</div>
+            <div class="tarih">bugün 22:00</div>
+        </a>
+    </div>
+
+    <div class="mesajKutusu">
+        <a href="#">
+            <img src="https://picsum.photos/id/65/50/50">
+            <div class="adSoyad">Melike (Öğretmen)</div>
+            <div class="tarih">bugün 21:30</div>
+        </a>
+    </div>
+
+    <div class="mesajKutusu">
+        <a href="#">
+            <img src="https://picsum.photos/id/91/50/50">
+            <div class="adSoyad">Murat (Yazılım Geliştirici)</div>
+            <div class="tarih">bugün 20:15</div>
+        </a>
+    </div>
+
+    <div class="mesajKutusu">
+        <a href="#">
+            <img src="https://picsum.photos/id/177/50/50">
+            <div class="adSoyad">Ceren (Doktor)</div>
+            <div class="tarih">dün 16:00</div>
+        </a>
+    </div>
+
+</body>
+</html>
