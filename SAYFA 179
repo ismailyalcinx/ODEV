@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body { font-family: sans-serif; background-color: #f0f0f0; display: flex; justify-content: center; padding-top: 50px; }
+        .chat-pencere { width: 350px; border: 1px solid #ccc; border-radius: 10px; overflow: hidden; background: white; }
+        .ust-bolum { padding: 10px; background: #fff; border-bottom: 2px solid lightblue; display: flex; align-items: center; gap: 10px; }
+        .mesaj-alani { height: 300px; background-color: lightblue; padding: 10px; overflow-y: auto; display: flex; flex-direction: column; gap: 5px; }
+        .mesaj-satiri { background: white; padding: 8px; border-radius: 5px; font-size: 13px; display: flex; align-items: center; gap: 5px; border: 1px solid #eee; }
+        .profil-img { width: 25px; height: 25px; border-radius: 50%; }
+        input[type="text"] { flex: 1; padding: 5px; border: 1px solid #ccc; border-radius: 3px; }
+        button { padding: 5px 10px; cursor: pointer; background: #eee; border: 1px solid #ccc; border-radius: 3px; }
+    </style>
+</head>
+<body>
+
+    <div class="chat-pencere">
+        <div class="ust-bolum">
+            <img src="https://picsum.photos/id/64/30/30" class="profil-img">
+            <input type="text" id="mesajKutusu" placeholder="Mesajınızı giriniz...">
+            <button onclick="mesajGonder()">Gönder</button>
+        </div>
+        <div class="mesaj-alani" id="liste">
+            <div class="mesaj-satiri"><img src="https://picsum.photos/id/64/20/20" class="profil-img"> <b>Herkese mutlu günler dilerim.</b> <small>07:30</small></div>
+        </div>
+    </div>
+
+    <script>
+        function mesajGonder() {
+            var mesaj = document.getElementById("mesajKutusu").value;
+            if(mesaj == "") return;
+            
+            var zaman = new Date();
+            var saat = zaman.getHours() + ":" + (zaman.getMinutes()<10?'0':'') + zaman.getMinutes();
+            
+            var yeniMesaj = '<div class="mesaj-satiri"><img src="https://picsum.photos/id/64/20/20" class="profil-img"> <b>' + mesaj + '</b> <small>' + saat + '</small></div>';
+            
+            document.getElementById("liste").innerHTML += yeniMesaj;
+            document.getElementById("mesajKutusu").value = "";
+        }
+    </script>
+
+</body>
+</html>
