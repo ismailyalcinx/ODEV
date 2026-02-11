@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body { font-family: sans-serif; padding: 20px; }
+        .js-baslik {
+            background-color: orange;
+            color: black;
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .alan { margin-top: 20px; }
+        input { padding: 8px; width: 200px; }
+        span { padding: 10px; margin-right: 10px; border: 1px dotted #ccc; }
+    </style>
+</head>
+<body>
+
+    <div class="js-baslik">JS cript</div>
+    <p>Görsel 5.5: Sınıf seçiciler</p>
+
+    <div class="alan">
+        <input type="text" name="kullaniciAdi" value="Kullanıcı Girişi">
+    </div>
+
+    <div class="alan">
+        <span>1. Eleman</span>
+        <span>2. Eleman</span>
+        <span>3. Eleman</span>
+    </div>
+
+    <script>
+        document.getElementsByName("kullaniciAdi")[0].style.backgroundColor = "red";
+
+        document.getElementsByTagName("span")[2].style.borderBottomStyle = "solid";
+        document.getElementsByTagName("span")[2].style.borderBottomWidth = "2px";
+    </script>
+
+</body>
+</html>
