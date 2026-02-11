@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body { font-family: sans-serif; text-align: center; background-color: #f0f0f0; }
+        .galeri-konteynir {
+            background-color: orange;
+            padding: 20px;
+            display: inline-block;
+            border-radius: 10px;
+            margin-top: 50px;
+        }
+        #anaResim {
+            width: 400px;
+            height: 300px;
+            display: block;
+            margin-bottom: 15px;
+            border: 5px solid white;
+            object-fit: cover;
+        }
+        button {
+            padding: 10px 15px;
+            margin: 5px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: white;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="galeri-konteynir">
+        <img id="anaResim" src="https://picsum.photos/id/145/400/300">
+        <br>
+        <button onclick="resim1()">Resim 1</button>
+        <button onclick="resim2()">Resim 2</button>
+        <button onclick="resim3()">Resim 3</button>
+    </div>
+
+    <script>
+        function resim1() {
+            document.getElementById("anaResim").src = "https://picsum.photos/id/145/400/300";
+        }
+
+        function resim2() {
+            document.getElementById("anaResim").src = "https://picsum.photos/id/158/400/300";
+        }
+
+        function resim3() {
+            document.getElementById("anaResim").src = "https://picsum.photos/id/331/400/300";
+        }
+    </script>
+
+</body>
+</html>
