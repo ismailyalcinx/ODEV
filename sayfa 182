@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            font-family: sans-serif;
+            padding: 50px;
+            transition: background-color 0.5s, color 0.5s;
+        }
+        .panel {
+            border: 1px solid #ccc;
+            padding: 20px;
+            display: inline-block;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            color: black;
+        }
+        .koyu-tema {
+            background-color: #222 !important;
+            color: white !important;
+        }
+        button { margin-top: 10px; cursor: pointer; }
+    </style>
+</head>
+<body id="sayfa">
+
+    <div class="panel" id="panelim">
+        <p>Web sayfasını <b>koyu</b> modda kullanmak ister misiniz?</p>
+        <input type="radio" name="mod" id="evet"> Evet <br>
+        <input type="radio" name="mod" id="hayir" checked> Hayır <br>
+        <button onclick="modAyarla()">Mod Ayarla</button>
+    </div>
+
+    <script>
+        function modAyarla() {
+            var evetSecili = document.getElementById("evet").checked;
+            var sayfa = document.getElementById("sayfa");
+            var panel = document.getElementById("panelim");
+
+            if (evetSecili) {
+                sayfa.style.backgroundColor = "black";
+                sayfa.style.color = "white";
+                panel.style.backgroundColor = "#333";
+                panel.style.color = "white";
+            } else {
+                sayfa.style.backgroundColor = "white";
+                sayfa.style.color = "black";
+                panel.style.backgroundColor = "#f9f9f9";
+                panel.style.color = "black";
+            }
+        }
+    </script>
+
+</body>
+</html>
