@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body { font-family: sans-serif; padding: 20px; background-color: #f4f4f4; }
+        #liste {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            word-wrap: break-word;
+            line-height: 2;
+            color: #333;
+        }
+        h2 { color: #2c3e50; text-align: center; }
+    </style>
+</head>
+<body>
+
+    <h2>Sıralanmış Sayılar (100 Adet)</h2>
+    <div id="liste">Sayılar yükleniyor...</div>
+
+    <script>
+        var sayilar = [];
+
+        for (var i = 0; i < 100; i++) {
+            var rastgele = Math.floor(Math.random() * 1000) + 1;
+            sayilar.push(rastgele);
+        }
+
+        sayilar.sort(function(a, b) {
+            return b - a;
+        });
+
+        document.getElementById("liste").innerHTML = sayilar.join(" - ");
+    </script>
+
+</body>
+</html>
