@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body { font-family: sans-serif; display: flex; flex-direction: column; align-items: center; padding-top: 100px; background-color: #f4f4f4; }
+        .nota-alani {
+            background-color: #ffffd2;
+            padding: 20px;
+            border: 1px solid #ddd;
+            min-width: 300px;
+            min-height: 50px;
+            text-align: center;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+        #potre { color: #333; font-size: 24px; letter-spacing: 2px; }
+        button { padding: 10px 15px; cursor: pointer; margin: 5px; border-radius: 3px; border: 1px solid #ccc; background: #eee; }
+        button:hover { background: #ddd; }
+    </style>
+</head>
+<body>
+
+    <div class="nota-alani">
+        <h3 id="potre"></h3>
+    </div>
+
+    <div>
+        <input type="button" onclick="melodiBaslat()" value="Melodi Başlat">
+        <input type="button" onclick="melodiDurdur()" value="Melodi Durdur">
+    </div>
+
+    <script>
+        var notalar = ["do", "re", "mi", "fa", "sol", "la", "si"];
+        var zamanlayici;
+
+        function melodiBaslat() {
+            if (zamanlayici) return; 
+            
+            zamanlayici = setInterval(function() {
+                var rastgeleIndeks = Math.floor(Math.random() * 7);
+                var secilenNota = notalar[rastgeleIndeks];
+                document.getElementById("potre").innerHTML += secilenNota + "_";
+            }, 2000);
+        }
+
+        function melodiDurdur() {
+            clearInterval(zamanlayici);
+            zamanlayici = null;
+        }
+    </script>
+
+</body>
+</html>
