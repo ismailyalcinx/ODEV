@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body { font-family: sans-serif; display: flex; justify-content: center; padding-top: 100px; background-color: #f0f0f0; }
+        .sayac-konteynir {
+            background-color: lightblue;
+            padding: 10px;
+            text-align: center;
+            width: 150px;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        button { padding: 5px 10px; cursor: pointer; margin: 10px 0; display: block; width: 100%; border: 1px solid #999; border-radius: 3px; background-color: #eee; }
+        #sayac { font-size: 50px; font-weight: bold; margin: 15px 0; }
+    </style>
+</head>
+<body>
+
+    <div class="sayac-konteynir">
+        <button onclick="artir()">Sayıyı Artır</button>
+        <div id="sayac">15</div>
+        <button onclick="azalt()">Sayıyı Azalt</button>
+    </div>
+
+    <script>
+        var mevcutSayi = 15;
+
+        function artir() {
+            mevcutSayi++;
+            document.getElementById("sayac").innerHTML = mevcutSayi;
+        }
+
+        function azalt() {
+            mevcutSayi--;
+            document.getElementById("sayac").innerHTML = mevcutSayi;
+        }
+    </script>
+
+</body>
+</html>
