@@ -1,0 +1,28 @@
+﻿@page
+@model RAZOR6OGRETMEN.Pages.PrivacyModel
+
+<div style="padding: 20px; font-family: Arial;">
+    <h2>Öğretmen Listesi ve %10 Zamlı Maaşlar</h2>
+
+    <table border="1" style="width: 100%; border-collapse: collapse; text-align: left;">
+        <thead>
+            <tr style="background-color: #f2f2f2;">
+                <th style="padding: 10px;">Ad Soyad</th>
+                <th style="padding: 10px;">Branş</th>
+                <th style="padding: 10px;">Mevcut Maaş</th>
+                <th style="padding: 10px; color: blue;">Zamlı Maaş (%10)</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var hoca in Model.Ogretmenler)
+            {
+                <tr>
+                    <td style="padding: 10px;">@hoca.Ad</td>
+                    <td style="padding: 10px;">@hoca.Brans</td>
+                    <td style="padding: 10px;">@hoca.Maas TL</td>
+                    <td style="padding: 10px; font-weight: bold; color: blue;">@hoca.ZamliMaas TL</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
