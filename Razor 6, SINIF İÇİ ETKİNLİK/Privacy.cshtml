@@ -1,0 +1,25 @@
+﻿@page
+@model Razor6.Pages.PrivacyModel
+
+<div style="padding: 20px; font-family: Arial;">
+    <h2>Ürün Listesi</h2>
+    <table border="1" style="width: 100%; border-collapse: collapse;">
+        <thead>
+            <tr style="background: #eee;">
+                <th>Ürün Adı</th>
+                <th>Fiyat</th>
+                <th>KDV'li Fiyat</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var urun in Model.Urunler)
+            {
+                <tr>
+                    <td>@urun.Ad</td>
+                    <td>@urun.Fiyat TL</td>
+                    <td>@urun.KdvliFiyat TL</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
