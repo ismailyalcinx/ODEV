@@ -1,0 +1,20 @@
+﻿@page
+@model WebApplication1.Pages.PrivacyModel
+
+<div style="font-family: Arial; padding: 20px;">
+    <h2>Yaş Kontrol Paneli</h2>
+
+    <form method="post">
+        <label>Yaşınızı Giriniz:</label><br />
+        <input type="number" asp-for="Yas" /><br /><br />
+        <button type="submit">Kontrol Et</button>
+    </form>
+
+    @if (!string.IsNullOrEmpty(Model.Mesaj))
+    {
+        <hr />
+        <h3 style="color: @(Model.Mesaj.Contains("Hata") ? "red" : "blue")">
+            @Model.Mesaj
+        </h3>
+    }
+</div>
