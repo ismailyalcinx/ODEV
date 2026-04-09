@@ -1,0 +1,9 @@
+@page
+@model huubenburdayim.Pages.test1Model
+@{
+    Layout = "Layout";
+}
+
+<div>
+    <h2>Hoş geldiniz</h2>
+</div>

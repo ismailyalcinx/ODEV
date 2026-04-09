@@ -1,0 +1,6 @@
+@page
+@model
+huubenburdayim.Pages.test2Model
+Layout Layout";
+<h2>Burası Hakkında Sayfası (test2)</h2>
+<p>Bu sayfa da aynı Layout'u kullanıyor.</p>
