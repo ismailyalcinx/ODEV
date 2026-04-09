@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Ödev Projesi</title>
+</head>
+<body style="font-family: Arial; margin: 0; padding: 0;">
+    <nav style="background: #333; padding: 15px;">
+        <a href="/test1" style="color: white; margin-right: 20px; text-decoration: none;">Ana Sayfa</a>
+        <a href="/test2" style="color: white; text-decoration: none;">Hakkında</a>
+    </nav>
+    <main style="padding: 20px; min-height: 300px;">
+        @RenderBody()
+    </main>
+    <footer style="background:#eee; padding: 20px; text-align: center; border-top: 1px solid #ccc;">
+        <p>&copy; 2026 [İsmail Çağlayan Yalçın]</p>
+    </footer>
+</body>
+</html>
+S
