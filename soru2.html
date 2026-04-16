@@ -1,0 +1,47 @@
+
+<html>
+<head>
+    <title>JavaScript Arrow Function Ödevi</title>
+</head>
+<body style="font-family: Arial; padding: 20px;">
+
+    <h2>Sayı Toplama Uygulaması</h2>
+
+    <div>
+        <label>Sayı 1:</label>
+        <input type="text" id="sayi1">
+        <br><br>
+        <label>Sayı 2:</label>
+        <input type="text" id="sayi2">
+        <br><br>
+        <button onclick="hesapla()">Topla</button>
+    </div>
+
+    <hr>
+    <h3 id="sonucGosterge"></h3>
+
+    <script>
+        const topla = (s1, s2) => {
+            return s1 + s2;
+        };
+
+        const hesapla = () => {
+            var deger1 = document.getElementById("sayi1").value;
+            var deger2 = document.getElementById("sayi2").value;
+
+            var n1 = parseFloat(deger1);
+            var n2 = parseFloat(deger2);
+
+            if (isNaN(n1) || isNaN(n2)) {
+                alert("Lütfen her iki kutuya da sayı giriniz!");
+                return;
+            }
+
+            var toplamSonuc = topla(n1, n2);
+
+            document.getElementById("sonucGosterge").innerHTML = "Toplam: " + toplamSonuc;
+        };
+    </script>
+
+</body>
+</html>
