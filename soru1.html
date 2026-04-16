@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Ödev</title>
+</head>
+<body style="font-family: Arial; padding: 20px;">
+
+    <h2>Kullanıcı Bilgi Formu</h2>
+
+    <div>
+        <label>Adınız:</label>
+        <input type="text" id="kullaniciAd">
+        <br><br>
+        <label>Yaşınız:</label>
+        <input type="text" id="kullaniciYas">
+        <br><br>
+        <button onclick="mesajGoster()">Bilgileri Göster</button>
+    </div>
+
+    <hr>
+    <h3 id="sonucEkrani"></h3>
+
+    <script>
+        function mesajGoster() {
+            var ad = document.getElementById("kullaniciAd").value;
+            var yasInput = document.getElementById("kullaniciYas").value;
+            var yas = parseInt(yasInput);
+
+            if (isNaN(yas)) {
+                alert("Lütfen yaş kısmına bir sayı giriniz!");
+                return;
+            }
+
+            var sonucBasligi = document.getElementById("sonucEkrani");
+            sonucBasligi.innerHTML = "Merhaba " + ad + ", yaşınız " + yas;
+        }
+    </script>
+
+</body>
+</html>
