@@ -1,0 +1,15 @@
+﻿@page
+@model proje11.Pages.test1Model
+
+<div style="padding: 20px; font-family: Arial;">
+    <h2>Çift Sayılar Listesi</h2>
+    <ul>
+        @foreach (var sayi in Model.Sayilar)
+        {
+            @if (sayi % 2 == 0)
+            {
+                <li>@sayi (Çifttir)</li>
+            }
+        }
+    </ul>
+</div>
