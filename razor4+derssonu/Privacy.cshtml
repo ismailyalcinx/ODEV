@@ -1,0 +1,26 @@
+﻿@page
+@model proje11.Pages.test1Model
+
+<div style="padding: 20px; font-family: Arial;">
+    <h2>Öğrenci Kayıt Sistemi</h2>
+
+    @if (Model.Ogrenciler != null && Model.Ogrenciler.Count > 0)
+    {
+        <ul>
+            @foreach (var ogrenci in Model.Ogrenciler)
+            {
+                <li>
+                    @ogrenci
+                    @if (ogrenci == "Ali")
+                    {
+                        <span>*</span>
+                    }
+                </li>
+            }
+        </ul>
+    }
+    else
+    {
+        <p>Kayıt yok</p>
+    }
+</div>
