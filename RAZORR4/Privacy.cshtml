@@ -1,0 +1,21 @@
+﻿@page
+@model WebApplication1.Pages.test1Model
+
+<div style="padding: 20px; font-family: Arial;">
+    @if (Model.GirisYaptiMi)
+    {
+        <h2 style="color: green;">Hoş geldin kullanıcı</h2>
+        <form method="post">
+            <input type="hidden" name="durum" value="false" />
+            <button type="submit">Çıkış Yap</button>
+        </form>
+    }
+    else
+    {
+        <h2 style="color: red;">Lütfen giriş yap</h2>
+        <form method="post">
+            <input type="hidden" name="durum" value="true" />
+            <button type="submit">Giriş Yap</button>
+        </form>
+    }
+</div>
