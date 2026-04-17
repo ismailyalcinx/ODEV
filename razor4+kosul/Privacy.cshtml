@@ -1,0 +1,20 @@
+﻿@page
+@model proje11.Pages.test1Model
+
+<div style="padding: 20px; font-family: Arial;">
+    <h2>Kullanıcı Listesi</h2>
+
+    @if (Model.Isimler != null && Model.Isimler.Count > 0)
+    {
+        <ul>
+            @foreach (var isim in Model.Isimler)
+            {
+                <li>@isim</li>
+            }
+        </ul>
+    }
+    else
+    {
+        <p>Liste şu an boş.</p>
+    }
+</div>
