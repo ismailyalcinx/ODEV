@@ -1,0 +1,31 @@
+﻿@page
+@model RAZOR7.Pages.test1Model
+
+<form method="post" style="padding: 20px; font-family: Arial;">
+    <h3>Öğrenci Kayıt (RAZOR7)</h3>
+    <hr />
+
+    <div>
+        <label>Ad:</label><br />
+        <input asp-for="Ogrenci.Ad" />
+        <span asp-validation-for="Ogrenci.Ad" style="color:red;"></span>
+    </div>
+
+    <br />
+
+    <div>
+        <label>Yaş:</label><br />
+        <input asp-for="Ogrenci.Yas" />
+        <span asp-validation-for="Ogrenci.Yas" style="color:red;"></span>
+    </div>
+
+    <br />
+    <button type="submit">Gönder</button>
+</form>
+
+@if (Model.Mesaj != null)
+{
+    <div style="margin-top:20px; color: green; font-weight: bold;">
+        @Model.Mesaj
+    </div>
+}
