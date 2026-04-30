@@ -1,11 +1,29 @@
 ﻿@page
 @model RAZOR7.Pages.test1Model
 
-<div style="padding: 20px; font-family: Arial; border: 1px solid #ccc;">
-    <h2>Öğrenci Kartı (RAZOR7)</h2>
-    <hr />
-    <p><strong>Ad:</strong> @Model.Ogrenci.Ad</p>
-    <p><strong>Yaş:</strong> @Model.Ogrenci.Yas</p>
-    <p><strong>Ortalama:</strong> @Model.Ogrenci.Ortalama</p>
-    <p><strong>E-posta:</strong> @Model.Ogrenci.Email</p>
-</div>
+<form method="post">
+    <div>
+        <label>Ad:</label><br />
+        <input asp-for="Ogrenci.Ad" />
+        <span asp-validation-for="Ogrenci.Ad" style="color:red;"></span>
+    </div>
+
+    <div>
+        <label>Yaş:</label><br />
+        <input asp-for="Ogrenci.Yas" />
+        <span asp-validation-for="Ogrenci.Yas" style="color:red;"></span>
+    </div>
+
+    <div>
+        <label>Email:</label><br />
+        <input asp-for="Ogrenci.Email" />
+        <span asp-validation-for="Ogrenci.Email" style="color:red;"></span>
+    </div>
+
+    <button type="submit">Kaydet</button>
+</form>
+
+@if (Model.Sonuc != null)
+{
+    <h2 style="color:green;">@Model.Sonuc</h2>
+}
